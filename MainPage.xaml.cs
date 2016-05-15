@@ -45,6 +45,10 @@ namespace Barometer
             this.InitializeComponent();
 
             this.DataContext = this.viewModel = App.Current;
+            pairedBands=null;
+            bandClient=null;
         }
+
+        
     }
 }

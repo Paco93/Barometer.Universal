@@ -1,34 +1,33 @@
-﻿<Page
+﻿<Page 
     x:Class="Barometer.MainPage"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:local="using:Barometer"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-    mc:Ignorable="d">
+    mc:Ignorable="d"
+     >
 
-    <StackPanel Orientation="Vertical" HorizontalAlignment="Center">
+    <StackPanel Orientation="Vertical" HorizontalAlignment="Center" Background="Black">
         <TextBlock HorizontalAlignment="Left" Margin="10,23,0,0" TextWrapping="Wrap" Text="GG - BAROMETER" VerticalAlignment="Top" FontSize="16"/>
-        <Button Content="Update" HorizontalAlignment="Left" Margin="10,64,0,0" VerticalAlignment="Top" Click="Button_Click" FontFamily="Global User Interface" FontSize="16"/>
-        <TextBlock Text="Pressure" Margin=" 0,10,0,0"></TextBlock>
-        <TextBlock Name="Pressure"></TextBlock>
-        <TextBlock Text="Temperature" Margin=" 0,10,0,0"></TextBlock>
-        <TextBlock Name="Temperature"></TextBlock>
+        <Button Name="BaromButton"  Content="Barometer Start Reading" HorizontalAlignment="Center" Margin="10,64,0,0" VerticalAlignment="Top" Click="Button_Click" FontFamily="Global User Interface" FontSize="16"/>
+        <TextBlock Text="Pressure" Margin=" 0,10,0,0" HorizontalAlignment="Center"></TextBlock>
+        <TextBlock Name="Pressure" HorizontalAlignment="Center"></TextBlock>
+        <TextBlock Text="Temperature" Margin=" 0,10,0,0" HorizontalAlignment="Center"></TextBlock>
+        <TextBlock Name="Temperature"  HorizontalAlignment="Center"></TextBlock>
 
-        <TextBlock Text="Skin Temperature" Margin=" 0,10,0,0"></TextBlock>
-        <TextBlock Name="SkinTemperature"></TextBlock>
-       
-        <TextBlock Text="UV Level" Margin=" 0,10,0,0"></TextBlock>
-        <TextBlock Name="UV_Level"></TextBlock>
-        <TextBlock Text="UV Exposure Today" Margin=" 0,10,0,0"></TextBlock>
-        <TextBlock Name="UV_Today"></TextBlock>
+        <TextBlock Text="Altitude" Margin=" 0,10,0,0" HorizontalAlignment="Center"></TextBlock>
+        <TextBlock Name="Altitude" HorizontalAlignment="Center"></TextBlock>
+        
+        <Button Content="UV Read Start" HorizontalAlignment="Center" Name="UVButton" Margin="10,64,0,0" VerticalAlignment="Top" Click="UV_Click" FontFamily="Global User Interface" FontSize="16"/>
 
-
-
+        <TextBlock Text="UV Level" Margin=" 0,10,0,0" HorizontalAlignment="Center"></TextBlock>
+        <TextBlock Name="UV_Level" HorizontalAlignment="Center"></TextBlock>
+        <TextBlock Text="UV Exposure Today" Margin=" 0,10,0,0" HorizontalAlignment="Center"></TextBlock>
+        <TextBlock Name="UV_Today" HorizontalAlignment="Center"></TextBlock>
 
         <ScrollViewer Margin="10,15,10,10" VerticalScrollBarVisibility="Auto">
             <TextBlock TextWrapping="Wrap" Text="{Binding StatusMessage}" FontSize="16"/>
         </ScrollViewer>
-
     </StackPanel>
 </Page>
